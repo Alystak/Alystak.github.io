@@ -9,6 +9,6 @@
   <input id= "hiddenCode" type="hidden" name="embedcode" value="use Libraries.Sound.Audio\nuse Libraries.System.File\n\nAudio hitsound\nAudio misssound\n\nFile filehitsound\nfilehitsound:SetPath(&quot;media/Boom.ogg&quot;)\nhitsound:Load(filehitsound)\n\nFile filemisssound\nfilemisssound:SetPath(&quot;media/Chime.ogg&quot;)\nmisssound:Load(filemisssound)\n\ntext fireloc = &quot;XX&quot;\ninteger hits = 0\ninteger guesses = 0\n\nrepeat until (guesses >= 5 or hits >= 3)\n  fireloc = input (&quot;Choose a location at which to fire. Use format: A1&quot;)\n  output &quot;You entered &quot;+fireloc\n  if fireloc = &quot;B3&quot; or fireloc = &quot;C3&quot; or fireloc = &quot;D3&quot;\n    output fireloc+&quot; is a HIT!&quot;\n    hitsound:PlayUntilDone()\n    hits = hits + 1\n    if hits = 3\n      output &quot;You sunk the cruiser!&quot;\n    end\n  else\n    output fireloc+&quot; is a miss.&quot;\n    misssound:PlayUntilDone()\n  end\n  guesses = guesses + 1\nend\n" /></form><iframe onload="loadEmbeddedIDE()" name="embeddedQuorum" frameborder="0" scrolling="no" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
   </iframe>
 </div>
-  <p> quorumlanguage.com/project.php?user=akikokhs&file=battleship </p>
+<p><a href="quorumlanguage.com/project.php?user=akikokhs&file=battleship">Battleship game in Quorum</a></p>
 </body>
 </html>
